@@ -103,37 +103,9 @@ def extract_weather(text):
     pattern = r'\b(cold|hot|iced|warm)\s+(drinks?|beverages?|coffees?|teas?|sodas?|waters?|frappes?|meals?|foods?)\b'
     text = re.sub(pattern, '', text)
     weather_keywords = {
-        # --- SOLAR (Hot/Sunny) ---
-        'sunny': 'solar', 'sun': 'solar', 'shine': 'solar',
-        'hot': 'solar', 'heat': 'solar', 'heatwave': 'solar',
-        'scorching': 'solar', 'boiling': 'solar', 'burning': 'solar',
-        'summer': 'solar', 'dry': 'solar', 'arid': 'solar',
-        'warm': 'solar', 'humid': 'solar', 'muggy': 'solar',
-        'sweat': 'solar', 'sweating': 'solar', 'thirsty': 'solar',
-        'bright': 'solar', 'clear': 'solar', 'beach': 'solar',
-
-        # --- POLAR (Cold/Freezing) ---
-        'cold': 'polar', 'cool': 'polar', 'chilly': 'polar',
-        'freezing': 'polar', 'freeze': 'polar', 'frozen': 'polar',
-        'winter': 'polar', 'snow': 'polar', 'snowy': 'polar',
-        'ice': 'polar', 'icy': 'polar', 'frost': 'polar',
-        'blizzard': 'polar', 'shiver': 'polar', 'shivering': 'polar',
-        'jacket': 'polar', 'coat': 'polar', 'scarf': 'polar',
-
-        # --- HYDRO (Rain/Wet) ---
-        'rain': 'hydro', 'rainy': 'hydro', 'raining': 'hydro',
-        'wet': 'hydro', 'water': 'hydro', 'soak': 'hydro',
-        'storm': 'hydro', 'stormy': 'hydro', 'thunder': 'hydro',
-        'lightning': 'hydro', 'typhoon': 'hydro', 'hurricane': 'hydro',
-        'monsoon': 'hydro', 'flood': 'hydro', 'pouring': 'hydro',
-        'drizzle': 'hydro', 'shower': 'hydro', 'umbrella': 'hydro',
-
-        # --- MILD (Neutral/Cloudy) ---
-        'cloudy': 'mild', 'clouds': 'mild', 'overcast': 'mild',
-        'gray': 'mild', 'grey': 'mild', 'gloomy': 'mild',
-        'windy': 'mild', 'wind': 'mild', 'breeze': 'mild',
-        'fine': 'mild', 'nice': 'mild', 'okay': 'mild',
-        'fresh': 'mild', 'fair': 'mild', 'dull': 'mild'
+        'sunny': 'sunny', 'hot': 'sunny', 'summer': 'sunny',
+        'rain': 'rainy', 'raining': 'rainy', 'rainy': 'rainy', 'wet': 'rainy', 'storm': 'rainy',
+        'cold': 'cold', 'freezing': 'cold', 'winter': 'cold', 'cloudy': 'cloudy'
     }
     for w in re.findall(r'\b\w+\b', text):
         if w in weather_keywords: return weather_keywords[w]
@@ -146,62 +118,44 @@ def extract_diet(text):
 
 def extract_mood(text):
     synonyms = {
-        # --- BRANCH 1: VITALITY (Healthy/Focus) ---
-        'gym': 'vitality', 'workout': 'vitality', 'healthy': 'vitality',
-        'diet': 'vitality', 'fresh': 'vitality', 'light': 'vitality',
-        'focus': 'vitality', 'study': 'vitality', 'productive': 'vitality',
-        'morning': 'vitality', 'breakfast': 'vitality', 'energetic': 'vitality',
-        'clean': 'vitality', 'fit': 'vitality',
-        
-        # --- BRANCH 2: CELEBRATORY (Party/Fun) ---
-        'party': 'celebratory', 'friends': 'celebratory', 'birthday': 'celebratory',
-        'winning': 'celebratory', 'promotion': 'celebratory', 'awesome': 'celebratory',
-        'good': 'celebratory', 'happy': 'celebratory', 'great': 'celebratory',
-        'yay': 'celebratory', 'treat': 'celebratory', 'share': 'celebratory',
-        'fun': 'celebratory', 'group': 'celebratory',
-
-        # --- BRANCH 3: CHILL (Relaxed/Cozy) ---
-        'chill': 'cozy', 'relax': 'cozy', 'rainy': 'cozy',
-        'cold': 'cozy', 'book': 'cozy', 'reading': 'cozy',
-        'movie': 'cozy', 'netflix': 'cozy', 'calm': 'cozy',
-        'quiet': 'cozy', 'afternoon': 'cozy', 'lazy': 'cozy',
-        'warm': 'cozy',
-
-        # --- BRANCH 4: COMFORT (Sad/Emotional) ---
-        'sad': 'comfort', 'crying': 'comfort', 'depressed': 'comfort',
-        'lonely': 'comfort', 'bad': 'comfort', 'terrible': 'comfort',
-        'heartbroken': 'comfort', 'miss': 'comfort', 'grief': 'comfort',
-        'emotional': 'comfort', 'blue': 'comfort', 'hard': 'comfort',
-
-        # --- BRANCH 5: STRESSED (Angry/Rushed) ---
-        'stressed': 'stressed', 'busy': 'stressed', 'deadline': 'stressed',
-        'rushed': 'stressed', 'panic': 'stressed', 'angry': 'stressed',
-        'furious': 'stressed', 'annoyed': 'stressed', 'mad': 'stressed',
-        'late': 'stressed', 'crunchy': 'stressed', 'fast': 'stressed',
-
-        # --- BRANCH 6: HANGRY (Starving/Craving) ---
-        'hungry': 'hangry', 'starving': 'hangry', 'famished': 'hangry',
-        'heavy': 'hangry', 'greasy': 'hangry', 'salty': 'hangry', 'huge': 'hangry',
-        'feast': 'hangry', 'full': 'hangry', 'big': 'hangry',
-
-        # --- BRANCH 7: SICK (Unwell) ---
-        'sick': 'sick', 'flu': 'sick', 'ill': 'sick',
-        'headache': 'sick', 'stomachache': 'sick', 'pain': 'sick',
-        'hangover': 'sick', 'drunk': 'sick', 'tired': 'sick',
-        'exhausted': 'sick', 'nausea': 'sick', 'unwell': 'sick',
-
-        # --- BRANCH 8: ROMANTIC (Date Night) ---
-        'love': 'romantic', 'anniversary': 'romantic',
-        'fancy': 'romantic', 'couple': 'romantic',
-        'special': 'romantic', 'candle': 'romantic'
+        'hangry': 'hungry', 'starving': 'hungry', 
+        'thirsty': 'refresh', 'refreshing': 'refresh',
+        'sad': 'comfort', 'depressed': 'comfort', 'comforting': 'comfort',
+        'gym': 'vitality', 'tired': 'vitality', 'energy': 'vitality',
+        'happy': 'sweet', 'celebrate': 'sweet'
     }
     words = re.findall(r'\b\w+\b', text.lower())
     clean_words = [synonyms.get(w, w) for w in words if not w.isdigit()]
     return " ".join(clean_words)
 
 # ==========================================
-# 3. NEW: THE GATEKEEPER LOGIC
+# 3. HELPER CHECKS (ALL PRESENT NOW!)
 # ==========================================
+
+def check_budget_hit(row_price, budget_constraint):
+    if not budget_constraint: return True
+    operator, value = budget_constraint
+    if operator == 'max': return row_price <= value
+    if operator == 'min': return row_price >= value
+    return True
+
+def check_diet_hit(row_tags, user_diet):
+    if not user_diet: return True
+    tags = str(row_tags)
+    if f"Non-{user_diet}" in tags: return False
+    return user_diet in tags
+
+def check_category_hit(row, user_cat):
+    if not user_cat: return True
+    blob = f"{row['main_category']} {row['sub_category']} {row['meal_type']} {row['base']}".lower()
+    search = user_cat.lower()
+    if "non-" + search in blob and "non-" not in search: return False
+    return search in blob
+
+def check_weather_hit(row_tags, user_weather):
+    """Checks if the item matches the specific weather tag."""
+    if not user_weather: return True
+    return user_weather in str(row_tags).lower()
 
 def check_command_intent(text):
     """
@@ -228,47 +182,41 @@ def parse_user_intent(user_input):
         'exclusions': exclusions
     }
     
-    # Check if ANY context was found (is the dictionary empty of useful data?)
+    # --- NEW CONTEXT CHECK ---
+    # We must strip out "Command Words" to see if there is any REAL context left.
+    # Example: "Recommend" -> removes "recommend" -> remains "" -> No Context.
+    # Example: "Recommend Coffee" -> removes "recommend" -> remains "Coffee" -> Context!
+    
+    temp_text = clean_text
+    command_keywords = [
+        'recommend', 'suggest', 'suggestion', 'what should i', 'what do you have',
+        'i want', 'i need', 'i like', 'give me', 'show me', 'looking for',
+        'can i have', 'can you', 'order', 'menu', 'list', 'crave', 'craving', 'try'
+    ]
+    
+    for word in command_keywords:
+        temp_text = temp_text.replace(word, "")
+    
+    # Now check if anything useful is left
     has_context = any([
         data['weather'], data['budget'], data['diet'], 
         data['temperature'], data['category'], 
-        data['mood_text'].strip() != ""
+        temp_text.strip() != "" # Check the STRIPPED text, not the raw text
     ])
     
     return data, has_context
 
+def get_fallback_recommendations():
+    return full_df.sort_values('price').head(5).to_dict('records')
+
 # ==========================================
 # 4. RECOMMENDATION ENGINE
 # ==========================================
-# (Standard helper functions omitted for brevity, they are same as before)
-def check_budget_hit(row_price, budget_constraint):
-    if not budget_constraint: return True
-    operator, value = budget_constraint
-    if operator == 'max': return row_price <= value
-    if operator == 'min': return row_price >= value
-    return True
-
-def check_diet_hit(row_tags, user_diet):
-    if not user_diet: return True
-    tags = str(row_tags)
-    if f"Non-{user_diet}" in tags: return False
-    return user_diet in tags
-
-def check_diet_hit(row_tags, user_diet):
-    if not user_diet: return True
-    tags = str(row_tags)
-    if f"Non-{user_diet}" in tags: return False
-    return user_diet in tags
-
-def get_fallback_recommendations():
-    return full_df.sort_values('price').head(5).to_dict('records')
 
 def recommend(parse_data):
     user_tfidf = tfidf_vectorizer.transform([parse_data['mood_text']])
     
-    # 1. Identify which Criteria are ACTIVE
     active_criteria = []
-    
     if parse_data['category']: active_criteria.append('Category')
     if parse_data['temperature']: active_criteria.append('Temperature')
     if parse_data['weather']: active_criteria.append('Weather')
@@ -291,19 +239,23 @@ def recommend(parse_data):
         hits = 0
         missed_tags = []
         
+        # Category Check
         if 'Category' in active_criteria:
-            blob = f"{row['main_category']} {row['sub_category']} {row['meal_type']} {row['base']}".lower()
-            if parse_data['category'].lower() not in blob:
+            if not check_category_hit(row, parse_data['category']):
                 fails += 1; missed_tags.append('Category')
             else: hits += 1
 
+        # Temperature Check
         if 'Temperature' in active_criteria:
             if str(row['temperature']).lower() != parse_data['temperature'].lower():
                 fails += 1; missed_tags.append('Temperature')
             else: hits += 1
 
+        # Weather Check (Using Helper Function!)
         if 'Weather' in active_criteria:
-            weather_hit = parse_data['weather'] in str(row['weather_tags']).lower()
+            weather_hit = check_weather_hit(row['weather_tags'], parse_data['weather'])
+            
+            # Comfort Logic (Cold day -> Hot food)
             comfort_hit = False
             item_temp = str(row['temperature']).lower()
             w = parse_data['weather']
@@ -313,6 +265,7 @@ def recommend(parse_data):
             if weather_hit or comfort_hit: hits += 1
             else: fails += 1; missed_tags.append('Weather')
 
+        # Mood Check
         if 'Mood' in active_criteria:
             item_moods = str(row['mood_tags']).lower()
             if any(m in item_moods for m in user_moods): hits += 1
@@ -332,7 +285,6 @@ def recommend(parse_data):
             'percentage': percentage, 'text_score': text_score, 'missed': missed_tags
         })
             
-    # Fallback if specific search yielded zero results
     if not candidates and (active_criteria or parse_data['budget'] or parse_data['diet']):
         print("   ⚠️  Criteria too strict. Showing Chef's Recommendations:")
         fallback = get_fallback_recommendations()
@@ -353,32 +305,21 @@ if __name__ == "__main__":
             if u.lower() in ['q', 'quit']: break
             if not u.strip(): continue
             
-            # 1. Parse Data and Check for Content
             p, has_context = parse_user_intent(u)
-            
-            # 2. Check for Command Words ("recommend", "want", etc.)
             has_command = check_command_intent(u)
             
-            # ============================================
-            # GATEKEEPER LOGIC (Your Requested Rules)
-            # ============================================
-            
-            # Case A: Context YES, Command NO (e.g. "It's hot outside")
             if has_context and not has_command:
                 print("   ℹ️  I noticed the context. Do you want me to recommend something?")
-                continue # Do NOT run recommender
+                continue 
 
-            # Case B: Context NO, Command YES (e.g. "Recommend me something")
             if not has_context and has_command:
                 print("   ❓ I don't know what recommendations you want, can you clarify it? (e.g., 'I want coffee')")
-                continue # Do NOT run recommender
+                continue 
 
-            # Case C: Context NO, Command NO (e.g. "Hello", "test")
             if not has_context and not has_command:
                 print("   👋 Hi there! I can help you find food. Try saying 'I want a cold drink'.")
                 continue
 
-            # Case D: BOTH PRESENT -> RUN ENGINE
             recs = recommend(p)
             
             if not recs:
