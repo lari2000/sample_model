@@ -17,6 +17,7 @@ numpy==2.3.5
 packaging==25.0
 pandas==2.3.3
 preshed==3.0.12
+pydantic==2.12.5
 pydantic_core==2.41.5
 python-dateutil==2.9.0.post0
 pytz==2025.2
