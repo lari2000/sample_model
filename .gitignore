@@ -1,0 +1,41 @@
+# --- Python Basics ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Virtual Environments ---
+# Common names for virtual env folders
+venv/
+env/
+.venv/
+.env/
+
+# --- Distribution / Build ---
+build/
+dist/
+*.egg-info/
+
+# --- Environment Variables & Secrets ---
+# IMPORTANT: Never commit secrets or API keys!
+.env
+
+# --- Unit Test / Coverage ---
+.coverage
+htmlcov/
+.pytest_cache/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints
+
+# --- IDE & Editor Settings (Optional but Recommended) ---
+# VS Code
+.vscode/
+# PyCharm / IntelliJ
+.idea/
+
+# --- Operating System Files ---
+# Mac
+.DS_Store
+# Windows
+Thumbs.db
