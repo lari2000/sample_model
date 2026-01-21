@@ -118,18 +118,87 @@ def extract_diet(text):
 
 def extract_mood(text):
     synonyms = {
-        'hangry': 'hungry', 'starving': 'hungry', 
-        'thirsty': 'refresh', 'refreshing': 'refresh',
-        'sad': 'comfort', 'depressed': 'comfort', 'comforting': 'comfort',
-        'gym': 'vitality', 'tired': 'vitality', 'energy': 'vitality',
-        'happy': 'sweet', 'celebrate': 'sweet'
+    # --- BRANCH 1: VITALITY (Healthy/Focus) ---
+    'gym': 'vitality', 'workout': 'vitality', 'healthy': 'vitality',
+    'diet': 'vitality', 'fresh': 'vitality', 'light': 'vitality',
+    'focus': 'vitality', 'study': 'vitality', 'productive': 'vitality',
+    'morning': 'vitality', 'breakfast': 'vitality', 'energetic': 'vitality',
+    'clean': 'vitality', 'fit': 'vitality', 'awake': 'vitality',
+    'work': 'vitality', 'grind': 'vitality',
+
+    # --- BRANCH 2: CELEBRATORY (Party/Fun) ---
+    'party': 'celebratory', 'friends': 'celebratory', 'birthday': 'celebratory',
+    'winning': 'celebratory', 'promotion': 'celebratory', 'awesome': 'celebratory',
+    'good': 'celebratory', 'happy': 'celebratory', 'great': 'celebratory',
+    'yay': 'celebratory', 'treat': 'celebratory', 'share': 'celebratory',
+    'fun': 'celebratory', 'group': 'celebratory', 'weekend': 'celebratory',
+    'cheers': 'celebratory',
+
+    # --- BRANCH 3: CHILL (Relaxed/Cozy) ---
+    'chill': 'cozy', 'relax': 'cozy', 'rainy': 'cozy',
+    'cold': 'cozy', 'book': 'cozy', 'reading': 'cozy',
+    'movie': 'cozy', 'netflix': 'cozy', 'calm': 'cozy',
+    'quiet': 'cozy', 'afternoon': 'cozy', 'lazy': 'cozy',
+    'warm': 'cozy', 'sleepy': 'cozy', 'slow': 'cozy',
+    'vibe': 'cozy', 'peace': 'cozy',
+
+    # --- BRANCH 4: COMFORT (Sad/Emotional) ---
+    'sad': 'comfort', 'crying': 'comfort', 'depressed': 'comfort',
+    'lonely': 'comfort', 'bad': 'comfort', 'terrible': 'comfort',
+    'heartbroken': 'comfort', 'miss': 'comfort', 'grief': 'comfort',
+    'emotional': 'comfort', 'blue': 'comfort', 'hard': 'comfort',
+    'breakup': 'comfort', 'sorry': 'comfort', 'hug': 'comfort',
+
+    # --- BRANCH 5: STRESSED (Angry/Rushed) ---
+    'stressed': 'stressed', 'busy': 'stressed', 'deadline': 'stressed',
+    'rushed': 'stressed', 'panic': 'stressed', 'angry': 'stressed',
+    'furious': 'stressed', 'annoyed': 'stressed', 'mad': 'stressed',
+    'late': 'stressed', 'crunchy': 'stressed', 'fast': 'stressed',
+    'tired': 'stressed', 'overwhelmed': 'stressed', 'pressure': 'stressed',
+
+    # --- BRANCH 6: HANGRY (Starving/Craving) ---
+    'hungry': 'hangry', 'starving': 'hangry', 'famished': 'hangry',
+    'heavy': 'hangry', 'greasy': 'hangry', 'salty': 'hangry', 'huge': 'hangry',
+    'feast': 'hangry', 'full': 'hangry', 'big': 'hangry',
+    'snack': 'hangry', 'sugar': 'hangry', 'sweet': 'hangry',
+
+    # --- BRANCH 7: SICK (Unwell/Hangover) ---
+    'sick': 'sick', 'flu': 'sick', 'ill': 'sick',
+    'headache': 'sick', 'stomachache': 'sick', 'pain': 'sick',
+    'hangover': 'sick', 'drunk': 'sick', 'exhausted': 'sick',
+    'nausea': 'sick', 'unwell': 'sick', 'dizzy': 'sick',
+    'wasted': 'sick', 'recovery': 'sick',
+
+    # --- BRANCH 8: ROMANTIC (Date Night) ---
+    'love': 'romantic', 'anniversary': 'romantic',
+    'fancy': 'romantic', 'couple': 'romantic',
+    'special': 'romantic', 'candle': 'romantic',
+    'date': 'romantic', 'sweetheart': 'romantic', 'sexy': 'romantic',
+
+    # --- BRANCH 9: CURIOSITY (Bored/Adventurous) ---
+    'bored': 'curiosity', 'surprise': 'curiosity', 'new': 'curiosity',
+    'different': 'curiosity', 'adventure': 'curiosity', 'try': 'curiosity',
+    'random': 'curiosity', 'whatever': 'curiosity',
+    'unique': 'curiosity', 'weird': 'curiosity', 'experiment': 'curiosity',
+
+    # --- BRANCH 10: ROUTINE (Neutral/Daily) ---
+    'commute': 'routine', 'driving': 'routine', 'traffic': 'routine',
+    'office': 'routine', 'meeting': 'routine', 'normal': 'routine',
+    'usual': 'routine', 'standard': 'routine', 'regular': 'routine',
+    'daily': 'routine', 'auto': 'routine', 'drive': 'routine',
+
+    # --- BRANCH 11: REFRESH (Thirsty/Hydration) ---
+    'refreshing': 'refresh', 'refresh': 'refresh', 
+    'thirsty': 'refresh', 'thirst': 'refresh', 
+    'hydrate': 'refresh', 'summer': 'refresh' 
     }
+    
     words = re.findall(r'\b\w+\b', text.lower())
     clean_words = [synonyms.get(w, w) for w in words if not w.isdigit()]
     return " ".join(clean_words)
 
 # ==========================================
-# 3. HELPER CHECKS (ALL PRESENT NOW!)
+# 3. HELPER CHECKS & INTENT LOGIC
 # ==========================================
 
 def check_budget_hit(row_price, budget_constraint):
@@ -153,18 +222,15 @@ def check_category_hit(row, user_cat):
     return search in blob
 
 def check_weather_hit(row_tags, user_weather):
-    """Checks if the item matches the specific weather tag."""
     if not user_weather: return True
     return user_weather in str(row_tags).lower()
 
 def check_command_intent(text):
-    """
-    Checks if the user used a 'Command Word' (e.g., recommend, want, give me).
-    """
     command_keywords = [
         'recommend', 'suggest', 'suggestion', 'what should i', 'what do you have',
         'i want', 'i need', 'i like', 'give me', 'show me', 'looking for',
-        'can i have', 'can you', 'order', 'menu', 'list', 'crave', 'craving', 'try'
+        'can i have', 'can you', 'order', 'menu', 'list', 'crave', 'craving', 'try',
+        'something', 'anything', 'whatever', 'surprise me'
     ]
     text = text.lower()
     return any(keyword in text for keyword in command_keywords)
@@ -182,32 +248,43 @@ def parse_user_intent(user_input):
         'exclusions': exclusions
     }
     
-    # --- NEW CONTEXT CHECK ---
-    # We must strip out "Command Words" to see if there is any REAL context left.
-    # Example: "Recommend" -> removes "recommend" -> remains "" -> No Context.
-    # Example: "Recommend Coffee" -> removes "recommend" -> remains "Coffee" -> Context!
-    
     temp_text = clean_text
     command_keywords = [
         'recommend', 'suggest', 'suggestion', 'what should i', 'what do you have',
         'i want', 'i need', 'i like', 'give me', 'show me', 'looking for',
-        'can i have', 'can you', 'order', 'menu', 'list', 'crave', 'craving', 'try'
+        'can i have', 'can you', 'order', 'menu', 'list', 'crave', 'craving', 'try',
+        'something', 'anything', 'whatever', 'surprise me'
     ]
     
     for word in command_keywords:
         temp_text = temp_text.replace(word, "")
     
-    # Now check if anything useful is left
     has_context = any([
         data['weather'], data['budget'], data['diet'], 
         data['temperature'], data['category'], 
-        temp_text.strip() != "" # Check the STRIPPED text, not the raw text
+        temp_text.strip() != "" 
     ])
     
     return data, has_context
 
 def get_fallback_recommendations():
-    return full_df.sort_values('price').head(5).to_dict('records')
+    recs = full_df.sort_values('price').head(10).to_dict('records') # Expanded to 10
+    for item in recs:
+        item['percentage'] = 0 
+        item['text_score'] = 0
+        item['missed'] = ['Fallback Recommendation']
+    return recs
+
+def print_analysis(p):
+    print("\n   🧠 AI Analysis:")
+    hit = False
+    if p['weather']: print(f"      • Weather: '{p['weather']}'"); hit = True
+    if p['mood_text']: print(f"      • Mood: '{p['mood_text']}'"); hit = True
+    if p['category']: print(f"      • Category: '{p['category']}'"); hit = True
+    if p['temperature']: print(f"      • Temp: '{p['temperature']}'"); hit = True
+    if p['budget']: print(f"      • Budget: {p['budget'][0]} {p['budget'][1]}"); hit = True
+    if not hit: print("      • No specific tags (General Search)")
+    print("   --------------------------------")
 
 # ==========================================
 # 4. RECOMMENDATION ENGINE
@@ -221,7 +298,10 @@ def recommend(parse_data):
     if parse_data['temperature']: active_criteria.append('Temperature')
     if parse_data['weather']: active_criteria.append('Weather')
     
-    known_moods = ['hungry', 'refresh', 'comfort', 'vitality', 'sweet', 'savory']
+    known_moods = [
+        'vitality', 'celebratory', 'cozy', 'comfort', 'stressed', 
+        'hangry', 'sick', 'romantic', 'curiosity', 'routine', 'refresh'
+    ]
     user_moods = [w for w in parse_data['mood_text'].split() if w in known_moods]
     if user_moods: active_criteria.append('Mood')
 
@@ -239,23 +319,18 @@ def recommend(parse_data):
         hits = 0
         missed_tags = []
         
-        # Category Check
         if 'Category' in active_criteria:
             if not check_category_hit(row, parse_data['category']):
                 fails += 1; missed_tags.append('Category')
             else: hits += 1
 
-        # Temperature Check
         if 'Temperature' in active_criteria:
             if str(row['temperature']).lower() != parse_data['temperature'].lower():
                 fails += 1; missed_tags.append('Temperature')
             else: hits += 1
 
-        # Weather Check (Using Helper Function!)
         if 'Weather' in active_criteria:
             weather_hit = check_weather_hit(row['weather_tags'], parse_data['weather'])
-            
-            # Comfort Logic (Cold day -> Hot food)
             comfort_hit = False
             item_temp = str(row['temperature']).lower()
             w = parse_data['weather']
@@ -265,7 +340,6 @@ def recommend(parse_data):
             if weather_hit or comfort_hit: hits += 1
             else: fails += 1; missed_tags.append('Weather')
 
-        # Mood Check
         if 'Mood' in active_criteria:
             item_moods = str(row['mood_tags']).lower()
             if any(m in item_moods for m in user_moods): hits += 1
@@ -284,21 +358,31 @@ def recommend(parse_data):
             'name': row['name'], 'price': row['price'],
             'percentage': percentage, 'text_score': text_score, 'missed': missed_tags
         })
-            
+
+    # --- FILTER LOGIC (UPDATED: TOP TIER ONLY) ---
+    valid_candidates = [c for c in candidates if c['percentage'] > 0]
+    
+    if valid_candidates:
+        # Find the highest score (e.g., 100)
+        best_score = max(c['percentage'] for c in valid_candidates)
+        # Keep ONLY items that have that highest score
+        candidates = [c for c in valid_candidates if c['percentage'] == best_score]
+    else:
+        # If no items scored >0%, fallback
+        candidates = [] 
+
     if not candidates and (active_criteria or parse_data['budget'] or parse_data['diet']):
-        print("   ⚠️  Criteria too strict. Showing Chef's Recommendations:")
-        fallback = get_fallback_recommendations()
-        for item in fallback:
-            item['percentage'] = 0; item['text_score'] = 0; item['missed'] = ['Fallback']
-        return fallback
+        print("   ⚠️  No exact matches found. Showing Chef's Recommendations:")
+        return get_fallback_recommendations()
 
     candidates = sorted(candidates, key=lambda x: (-x['percentage'], -x['text_score'], x['price']))
-    return candidates[:5]
+    
+    return candidates 
 
 if __name__ == "__main__":
     if load_data() is not None:
         build_model(full_df)
-        print("\n🤖 STRICT BOT: Ready! (Requires Command AND Context)")
+        print("\n🤖 SMART BOT: Ready! (Best Matches Only)")
         
         while True:
             u = input("\nYou: ")
@@ -309,17 +393,27 @@ if __name__ == "__main__":
             has_command = check_command_intent(u)
             
             if has_context and not has_command:
-                print("   ℹ️  I noticed the context. Do you want me to recommend something?")
+                print_analysis(p)
+                print("   ℹ️  I noticed these preferences. Do you want me to recommend something?")
                 continue 
 
             if not has_context and has_command:
-                print("   ❓ I don't know what recommendations you want, can you clarify it? (e.g., 'I want coffee')")
-                continue 
+                wildcards = ['something', 'anything', 'whatever', 'surprise me']
+                if any(w in u.lower() for w in wildcards):
+                    print("   🎲 You're feeling adventurous! Here are our best sellers:")
+                    recs = get_fallback_recommendations()
+                    for item in recs:
+                        print(f"   ★ {item['name']} (₱{item['price']})")
+                    continue
+                else:
+                    print("   ❓ I don't know what recommendations you want, can you clarify it?")
+                    continue 
 
             if not has_context and not has_command:
-                print("   👋 Hi there! I can help you find food. Try saying 'I want a cold drink'.")
+                print("   👋 Hi there! Try saying 'I want a cold drink'.")
                 continue
 
+            print_analysis(p)
             recs = recommend(p)
             
             if not recs:
@@ -329,7 +423,7 @@ if __name__ == "__main__":
                     score = item.get('percentage', 0)
                     missed = ", ".join(item.get('missed', [])) if item.get('missed') else "None"
                     
-                    if missed == 'Fallback':
+                    if missed == 'Fallback Recommendation':
                         print(f"   💡 [Chef's Rec] {item['name']} (₱{item['price']})")
                     elif score == 100:
                         print(f"   ★ {item['name']} (₱{item['price']}) - 100% Match!")
