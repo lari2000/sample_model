@@ -1,35 +1,35 @@
 id,name,ingredients,mood_tags,meal_type,weather_tags,dietary_tags,temperature,price,main_category,sub_category,base
-1,Chicken Creamy Mushroom n Aglio Olio rice,"chicken, rice, vegetables, sauce, pasta, garlic, olive oil, mushroom","hungry, heavy, dinner, lunch, savory","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,290,Food,Meal,
-2,Salisbury Steak n Mushroom Sauce,"beef, rice, vegetables, sauce, mushroom","hungry, heavy, dinner, lunch, savory","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,290,Food,Meal,
-3,Fish Fillet n Buttermilk Sauce,"fish, rice, vegetables, sauce","hungry, heavy, dinner, lunch, savory","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian (Pescatarian),Hot,270,Food,Meal,
-4,Crispy Chicken Fingers n Aglio Olio rice,"chicken, rice, vegetables, sauce, pasta, garlic, olive oil","hungry, heavy, dinner, lunch, savory","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,250,Food,Meal,
-5,Hungarian Sausage n Aglio Olio rice,"pork, rice, vegetables, sauce, pasta, garlic, olive oil","hungry, heavy, dinner, lunch, savory","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,250,Food,Meal,
-6,Corned Beef and Eggs,"beef, rice, vegetables, sauce, egg","hungry, heavy, dinner, lunch, savory","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,210,Food,Meal,
-7,Spam n Eggs,"pork, rice, vegetables, sauce, egg","hungry, heavy, dinner, lunch, savory","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,190,Food,Meal,
-8,Italian Meatballs n Basil Tomato Sauce,"pork, rice, vegetables, sauce","hungry, heavy, dinner, lunch, savory","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,260,Food,Meal,
-9,Bacon Sandwich,"pork, bread, lettuce, tomato, mayo","light, snack, quick, savory","Breakfast, Snack","any, mild",Non-Vegetarian,Warm,210,Food,Bread,
-10,Ham Sandwich,"pork, bread, lettuce, tomato, mayo","light, snack, quick, savory","Breakfast, Snack","any, mild",Non-Vegetarian,Warm,210,Food,Bread,
-11,Spam Sandwich,"pork, bread, lettuce, tomato, mayo","light, snack, quick, savory","Breakfast, Snack","any, mild",Non-Vegetarian,Warm,210,Food,Bread,
-12,Chicken Sandwich,"chicken, bread, lettuce, tomato, mayo","light, snack, quick, savory","Breakfast, Snack","any, mild",Non-Vegetarian,Warm,210,Food,Bread,
-13,Pepperoni Cheese Panini,"pork, bread, lettuce, tomato, mayo, cheese","light, snack, quick, savory","Breakfast, Snack","any, mild",Non-Vegetarian,Warm,190,Food,Bread,
-14,Chicken Pesto Panini,"chicken, bread, lettuce, tomato, mayo, cheese, basil, garlic, pine nuts","light, snack, quick, savory","Breakfast, Snack","any, mild",Non-Vegetarian,Warm,190,Food,Bread,
-15,Aglio e Olio,pasta,"comfort, heavy, savory, dinner","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,170,Food,Pasta,
-16,Chicken Alfredo,"chicken, pasta, cream, cheese","comfort, heavy, savory, dinner","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,170,Food,Pasta,
-17,Tomato Pesto,"pasta, tomato sauce, herbs, basil, garlic, olive oil","comfort, heavy, savory, dinner","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,170,Food,Pasta,
-18,Carbonara,"pasta, cream, cheese","comfort, heavy, savory, dinner","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,150,Food,Pasta,
-19,Spaghetti,pasta,"comfort, heavy, savory, dinner","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,150,Food,Pasta,
-20,Tuna Pesto,"fish, pasta, basil, garlic, olive oil, tuna chunks","comfort, heavy, savory, dinner","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian (Pescatarian),Hot,170,Food,Pasta,
-21,Classic Waffle,"waffle batter, syrup, butter","sweet, dessert, comfort, snack","Snack, Dessert","any, mild",Vegetarian,Warm,99,Food,Waffle,
-22,Apple Waffle,"waffle batter, syrup, butter, apple, cinnamon","sweet, dessert, comfort, snack","Snack, Dessert","any, mild",Vegetarian,Warm,150,Food,Waffle,
-23,Biscoff Waffle,"waffle batter, syrup, butter, biscoff spread, cookie crumbs","sweet, dessert, comfort, snack","Snack, Dessert","any, mild",Vegetarian,Warm,160,Food,Waffle,
-24,Ice Cream Waffle,"waffle batter, syrup, butter, vanilla ice cream","sweet, dessert, comfort, snack","Snack, Dessert","any, mild",Vegetarian,Warm,130,Food,Waffle,
-25,Blueberry Waffle,"waffle batter, syrup, butter, blueberry compote","sweet, dessert, comfort, snack","Snack, Dessert","any, mild",Vegetarian,Warm,145,Food,Waffle,
-26,Cheesy Waffle,"waffle batter, syrup, butter","sweet, dessert, comfort, snack","Snack, Dessert","any, mild",Vegetarian,Warm,130,Food,Waffle,
-27,Choco Waffle,"waffle batter, syrup, butter, chocolate hazelnut spread","sweet, dessert, comfort, snack","Snack, Dessert","any, mild",Vegetarian,Warm,120,Food,Waffle,
-28,Mango Waffle,"waffle batter, syrup, butter, fresh mango","sweet, dessert, comfort, snack","Snack, Dessert","any, mild",Vegetarian,Warm,145,Food,Waffle,
-29,Bacon Waffle,"pork, waffle batter, syrup, butter","sweet, dessert, comfort, snack","Snack, Dessert","any, mild",Non-Vegetarian,Warm,160,Food,Waffle,
-30,Nutella Waffle,"waffle batter, syrup, butter, chocolate hazelnut spread","sweet, dessert, comfort, snack","Snack, Dessert","any, mild",Vegetarian,Warm,140,Food,Waffle,
-31,Strawberry Waffle,"waffle batter, syrup, butter, fresh strawberry","sweet, dessert, comfort, snack","Snack, Dessert","any, mild",Vegetarian,Warm,145,Food,Waffle,
+1,Chicken Creamy Mushroom n Aglio Olio rice,"chicken, rice, vegetables, sauce, pasta, garlic, olive oil, mushroom","hangry, cozy, romantic","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,290,Food,Meal,
+2,Salisbury Steak n Mushroom Sauce,"beef, rice, vegetables, sauce, mushroom","hangry, comfort","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,290,Food,Meal,
+3,Fish Fillet n Buttermilk Sauce,"fish, rice, vegetables, sauce","hangry, vitality, curiosity","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian (Pescatarian),Hot,270,Food,Meal,
+4,Crispy Chicken Fingers n Aglio Olio rice,"chicken, rice, vegetables, sauce, pasta, garlic, olive oil","hangry, celebratory, comfort","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,250,Food,Meal,
+5,Hungarian Sausage n Aglio Olio rice,"pork, rice, vegetables, sauce, pasta, garlic, olive oil","stressed, hangry","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,250,Food,Meal,
+6,Corned Beef and Eggs,"beef, rice, vegetables, sauce, egg","hangry, romantic, cozy","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,210,Food,Meal,
+7,Spam n Eggs,"pork, rice, vegetables, sauce, egg","hangry, routine, comfort","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,190,Food,Meal,
+8,Italian Meatballs n Basil Tomato Sauce,"pork, rice, vegetables, sauce","hangry, romantic, cozy","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,260,Food,Meal,
+9,Bacon Sandwich,"pork, bread, lettuce, tomato, mayo","hangry, comfort","Breakfast, Snack","any, mild",Non-Vegetarian,Warm,210,Food,Bread,
+10,Ham Sandwich,"pork, bread, lettuce, tomato, mayo","routine, vitality","Breakfast, Snack","any, mild",Non-Vegetarian,Warm,210,Food,Bread,
+11,Spam Sandwich,"pork, bread, lettuce, tomato, mayo","comfort, routine","Breakfast, Snack","any, mild",Non-Vegetarian,Warm,210,Food,Bread,
+12,Chicken Sandwich,"chicken, bread, lettuce, tomato, mayo","vitality, routine","Breakfast, Snack","any, mild",Non-Vegetarian,Warm,210,Food,Bread,
+13,Pepperoni Cheese Panini,"pork, bread, lettuce, tomato, mayo, cheese","stressed, celebratory","Breakfast, Snack","any, mild",Non-Vegetarian,Warm,190,Food,Bread,
+14,Chicken Pesto Panini,"chicken, bread, lettuce, tomato, mayo, cheese, basil, garlic, pine nuts","romantic, cozy","Breakfast, Snack","any, mild",Non-Vegetarian,Warm,190,Food,Bread,
+15,Aglio e Olio,pasta,"vitality, cozy","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,170,Food,Pasta,
+16,Chicken Alfredo,"chicken, pasta, cream, cheese","comfort, celebratory","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,170,Food,Pasta,
+17,Tomato Pesto,"pasta, tomato sauce, herbs, basil, garlic, olive oil","romantic, curiosity","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,170,Food,Pasta,
+18,Carbonara,"pasta, cream, cheese","hangry, stressed","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,150,Food,Pasta,
+19,Spaghetti,pasta,"routine, comfort","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian,Hot,150,Food,Pasta,
+20,Tuna Pesto,"fish, pasta, basil, garlic, olive oil, tuna chunks","vitality, curiosity","Lunch, Dinner","rainy, cold, cloudy",Non-Vegetarian (Pescatarian),Hot,170,Food,Pasta,
+21,Classic Waffle,"waffle batter, syrup, butter","routine, cozy","Snack, Dessert","any, mild",Vegetarian,Warm,99,Food,Waffle,
+22,Apple Waffle,"waffle batter, syrup, butter, apple, cinnamon","cozy, vitality","Snack, Dessert","any, mild",Vegetarian,Warm,150,Food,Waffle,
+23,Biscoff Waffle,"waffle batter, syrup, butter, biscoff spread, cookie crumbs","curiosity, celebratory","Snack, Dessert","any, mild",Vegetarian,Warm,160,Food,Waffle,
+24,Ice Cream Waffle,"waffle batter, syrup, butter, vanilla ice cream","celebratory, stressed","Snack, Dessert","any, mild",Vegetarian,Warm,130,Food,Waffle,
+25,Blueberry Waffle,"waffle batter, syrup, butter, blueberry compote","vitality, routine","Snack, Dessert","any, mild",Vegetarian,Warm,145,Food,Waffle,
+26,Cheesy Waffle,"waffle batter, syrup, butter","curiosity, hangry","Snack, Dessert","any, mild",Vegetarian,Warm,130,Food,Waffle,
+27,Choco Waffle,"waffle batter, syrup, butter, chocolate hazelnut spread","comfort, celebratory","Snack, Dessert","any, mild",Vegetarian,Warm,120,Food,Waffle,
+28,Mango Waffle,"waffle batter, syrup, butter, fresh mango","refresh, romantic","Snack, Dessert","any, mild",Vegetarian,Warm,145,Food,Waffle,
+29,Bacon Waffle,"pork, waffle batter, syrup, butter","hangry, stressed","Snack, Dessert","any, mild",Non-Vegetarian,Warm,160,Food,Waffle,
+30,Nutella Waffle,"waffle batter, syrup, butter, chocolate hazelnut spread","comfort, romantic","Snack, Dessert","any, mild",Vegetarian,Warm,140,Food,Waffle,
+31,Strawberry Waffle,"waffle batter, syrup, butter, fresh strawberry","romantic, refresh","Snack, Dessert","any, mild",Vegetarian,Warm,145,Food,Waffle,
 32,Hot Americano,"espresso, water","vitality, routine","Snack, Drink","rainy, cold, cloudy",Vegan,Hot,100,Beverage,Coffee,
 33,Iced Americano,"espresso, water","routine, vitality, stressed","Snack, Drink","sunny, hot, summer",Vegan,Cold,120,Beverage,Coffee,
 34,Hot Caffe Latte,"espresso, milk","chill, comfort, routine","Snack, Drink","rainy, cold, cloudy",Vegetarian,Hot,120,Beverage,Coffee,
@@ -52,42 +52,42 @@ id,name,ingredients,mood_tags,meal_type,weather_tags,dietary_tags,temperature,pr
 51,Iced Caramel Oat Latte,"espresso, oat milk, caramel sauce","vitality, routine","Snack, Drink","sunny, hot, summer",Vegan,Cold,160,Beverage,Coffee,
 52,Iced Biscoff Latte,"espresso, milk","curiosity, celebratory, hangry","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,160,Beverage,Coffee,
 53,Iced Shaken Affogato,"espresso, water","celebratory, curiosity, romantic","Snack, Drink","sunny, hot, summer",Vegan,Cold,160,Beverage,Coffee,
-54,Hot Chocolate,"espresso, water, chocolate syrup","energy, focus, morning, work, warm","Snack, Drink","rainy, cold, cloudy",Vegan,Hot,120,Beverage,Non-Coffee,
-55,Iced Chocolate,"espresso, water, chocolate syrup","energy, focus, morning, work, refresh","Snack, Drink","sunny, hot, summer",Vegan,Cold,150,Beverage,Non-Coffee,
-56,Hot Matcha,"espresso, water","energy, focus, morning, work, warm","Snack, Drink","rainy, cold, cloudy",Vegan,Hot,120,Beverage,Non-Coffee,
-57,Iced Matcha,"espresso, water","energy, focus, morning, work, refresh","Snack, Drink","sunny, hot, summer",Vegan,Cold,150,Beverage,Non-Coffee,
-58,Caramel Macchiato,"blended ice, milk, whipped cream, espresso","sweet, treat, dessert, happy","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Coffee
-59,Salted Caramel,"blended ice, milk, whipped cream","sweet, treat, dessert, happy","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Coffee
-60,Cafe Mocha,"blended ice, milk, whipped cream, espresso","sweet, treat, dessert, happy","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Coffee
-61,White Chocolate,"blended ice, milk, whipped cream, chocolate sauce","sweet, treat, dessert, happy","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,160,Beverage,Frappe,Coffee
-62,Coffee Jelly,"blended ice, milk, whipped cream, espresso","sweet, treat, dessert, happy","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,165,Beverage,Frappe,Coffee
-63,Strawberry Ice cream,"blended ice, milk, whipped cream, strawberry syrup","sweet, treat, dessert, happy","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,160,Beverage,Frappe,Non-Coffee
-64,Vanilla,"blended ice, milk, whipped cream, vanilla syrup","sweet, treat, dessert, happy","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Non-Coffee
-65,Biscoff,"blended ice, milk, whipped cream","sweet, treat, dessert, happy","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Non-Coffee
-66,Chocolate Chip Cream,"blended ice, milk, whipped cream, chocolate sauce","sweet, treat, dessert, happy","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Non-Coffee
-67,Matcha,"blended ice, milk, whipped cream, matcha powder","sweet, treat, dessert, happy","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Non-Coffee
-68,Caramel Oreo,"blended ice, milk, whipped cream, crushed cookies","sweet, treat, dessert, happy","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,160,Beverage,Frappe,Non-Coffee
-69,Mango Cheesecake,"blended ice, milk, whipped cream, mango puree","sweet, treat, dessert, happy","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,165,Beverage,Frappe,Non-Coffee
-70,Avocado Creamcheese,"blended ice, milk, whipped cream, avocado","sweet, treat, dessert, happy","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,160,Beverage,Frappe,Non-Coffee
-71,Caramel Float Cereal,"soda water, ice cream, caramel drizzle","fun, sweet, treat, summer","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,175,Beverage,Float,
-72,Matcha Float,"matcha, ice cream","fun, sweet, treat, summer","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,165,Beverage,Float,
-73,Chocolate Float,"chocolate, ice cream","fun, sweet, treat, summer","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,165,Beverage,Float,
-74,Mocha Float,"coffee, ice cream","fun, sweet, treat, summer","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,165,Beverage,Float,
-75,Salted Caramel Float,"soda water, ice cream, caramel drizzle","fun, sweet, treat, summer","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,165,Beverage,Float,
-76,Okinawa,"black tea, milk, sugar, tapioca pearls","sweet, chill, relax, snack","Snack, Drink","any, mild",Vegetarian,Cold,100,Beverage,Milk Tea,
-77,Cookies and Cream,"black tea, milk, sugar, tapioca pearls, cookie bits","sweet, chill, relax, snack","Snack, Drink","any, mild",Vegetarian,Cold,100,Beverage,Milk Tea,
-78,Matcha,"matcha, milk, sugar, tapioca pearls","sweet, chill, relax, snack","Snack, Drink","any, mild",Vegetarian,Cold,100,Beverage,Milk Tea,
-79,Wintermelon,"black tea, milk, sugar, tapioca pearls, wintermelon syrup","sweet, chill, relax, snack","Snack, Drink","any, mild",Vegetarian,Cold,100,Beverage,Milk Tea,
-80,Chocolate,"black tea, milk, sugar, tapioca pearls, chocolate powder","sweet, chill, relax, snack","Snack, Drink","any, mild",Vegetarian,Cold,100,Beverage,Milk Tea,
-81,Cheese Cake,"black tea, milk, sugar, tapioca pearls, cream cheese walling","sweet, chill, relax, snack","Snack, Drink","any, mild",Vegetarian,Cold,120,Beverage,Milk Tea,
-82,Blue Ocean,"soda water, fruit syrup, ice, blue curacao, lemon","refresh, cool, thirst, summer","Snack, Drink","sunny, hot, summer",Vegan,Cold,150,Beverage,Sparkling Soda,
-83,Sunset Dream,"soda water, fruit syrup, ice, strawberry, orange","refresh, cool, thirst, summer","Snack, Drink","sunny, hot, summer",Vegan,Cold,150,Beverage,Sparkling Soda,
-84,Strawberry Yakult,"soda water, fruit syrup, ice, yakult","refresh, cool, thirst, summer","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Sparkling Soda,
-85,Peach Soda,"soda water, fruit syrup, ice, peach syrup","refresh, cool, thirst, summer","Snack, Drink","sunny, hot, summer",Vegan,Cold,135,Beverage,Sparkling Soda,
-86,Green Apple,"soda water, fruit syrup, ice, green apple syrup","refresh, cool, thirst, summer","Snack, Drink","sunny, hot, summer",Vegan,Cold,130,Beverage,Sparkling Soda,
-87,Blueberry,"soda water, fruit syrup, ice, blueberry syrup","refresh, cool, thirst, summer","Snack, Drink","sunny, hot, summer",Vegan,Cold,130,Beverage,Sparkling Soda,
-88,Peach Tea,"green tea, fruit jam, ice, peach slices","refresh, cool, thirst, summer","Snack, Drink","sunny, hot, summer",Vegan,Cold,140,Beverage,Fruit Tea,
-89,Lemon Fruit Tea,"green tea, fruit jam, ice, lemon slices","refresh, cool, thirst, summer","Snack, Drink","sunny, hot, summer",Vegan,Cold,140,Beverage,Fruit Tea,
-90,Strawberry Fruit Tea,"green tea, fruit jam, ice, strawberry bits","refresh, cool, thirst, summer","Snack, Drink","sunny, hot, summer",Vegan,Cold,150,Beverage,Fruit Tea,
-91,Kiwi Fruit Tea,"green tea, fruit jam, ice, kiwi slices","refresh, cool, thirst, summer","Snack, Drink","sunny, hot, summer",Vegan,Cold,140,Beverage,Fruit Tea,
-92,Blueberry Fruit Tea,"green tea, fruit jam, ice, blueberry","refresh, cool, thirst, summer","Snack, Drink","sunny, hot, summer",Vegan,Cold,140,Beverage,Fruit Tea,
+54,Hot Chocolate,"espresso, water, chocolate syrup","comfort, cozy","Snack, Drink","rainy, cold, cloudy",Vegan,Hot,120,Beverage,Non-Coffee,
+55,Iced Chocolate,"espresso, water, chocolate syrup","celebratory, refresh","Snack, Drink","sunny, hot, summer",Vegan,Cold,150,Beverage,Non-Coffee,
+56,Hot Matcha,"espresso, water","vitality, sick","Snack, Drink","rainy, cold, cloudy",Vegan,Hot,120,Beverage,Non-Coffee,
+57,Iced Matcha,"espresso, water","vitality, routine","Snack, Drink","sunny, hot, summer",Vegan,Cold,150,Beverage,Non-Coffee,
+58,Caramel Macchiato,"blended ice, milk, whipped cream, espresso","romantic, celebratory","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Coffee
+59,Salted Caramel,"blended ice, milk, whipped cream","stressed, hangry","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Coffee
+60,Cafe Mocha,"blended ice, milk, whipped cream, espresso","hangry, comfort","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Coffee
+61,White Chocolate,"blended ice, milk, whipped cream, chocolate sauce","comfort, romantic","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,160,Beverage,Frappe,Coffee
+62,Coffee Jelly,"blended ice, milk, whipped cream, espresso","curiosity, hangry","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,165,Beverage,Frappe,Coffee
+63,Strawberry Ice cream,"blended ice, milk, whipped cream, strawberry syrup","romantic, refresh","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,160,Beverage,Frappe,Non-Coffee
+64,Vanilla,"blended ice, milk, whipped cream, vanilla syrup","routine, comfort","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Non-Coffee
+65,Biscoff,"blended ice, milk, whipped cream","cozy, curiosity","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Non-Coffee
+66,Chocolate Chip Cream,"blended ice, milk, whipped cream, chocolate sauce","celebratory, comfort","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Non-Coffee
+67,Matcha,"blended ice, milk, whipped cream, matcha powder","vitality, refresh","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Frappe,Non-Coffee
+68,Caramel Oreo,"blended ice, milk, whipped cream, crushed cookies","stressed, hangry","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,160,Beverage,Frappe,Non-Coffee
+69,Mango Cheesecake,"blended ice, milk, whipped cream, mango puree","refresh, romantic","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,165,Beverage,Frappe,Non-Coffee
+70,Avocado Creamcheese,"blended ice, milk, whipped cream, avocado","hangry, vitality","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,160,Beverage,Frappe,Non-Coffee
+71,Caramel Float Cereal,"soda water, ice cream, caramel drizzle","curiosity, celebratory","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,175,Beverage,Float,
+72,Matcha Float,"matcha, ice cream","vitality, refresh","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,165,Beverage,Float,
+73,Chocolate Float,"chocolate, ice cream","comfort, celebratory","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,165,Beverage,Float,
+74,Mocha Float,"coffee, ice cream","hangry, stressed","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,165,Beverage,Float,
+75,Salted Caramel Float,"soda water, ice cream, caramel drizzle","stressed, romantic","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,165,Beverage,Float,
+76,Okinawa,"black tea, milk, sugar, tapioca pearls","comfort, routine","Snack, Drink","any, mild",Vegetarian,Cold,100,Beverage,Milk Tea,
+77,Cookies and Cream,"black tea, milk, sugar, tapioca pearls, cookie bits","celebratory, curiosity","Snack, Drink","any, mild",Vegetarian,Cold,100,Beverage,Milk Tea,
+78,Matcha,"matcha, milk, sugar, tapioca pearls","vitality, sick","Snack, Drink","any, mild",Vegetarian,Cold,100,Beverage,Milk Tea,
+79,Wintermelon,"black tea, milk, sugar, tapioca pearls, wintermelon syrup","refresh, cozy","Snack, Drink","any, mild",Vegetarian,Cold,100,Beverage,Milk Tea,
+80,Chocolate,"black tea, milk, sugar, tapioca pearls, chocolate powder","comfort, romantic","Snack, Drink","any, mild",Vegetarian,Cold,100,Beverage,Milk Tea,
+81,Cheese Cake,"black tea, milk, sugar, tapioca pearls, cream cheese walling","hangry, stressed","Snack, Drink","any, mild",Vegetarian,Cold,120,Beverage,Milk Tea,
+82,Blue Ocean,"soda water, fruit syrup, ice, blue curacao, lemon","refresh, curiosity","Snack, Drink","sunny, hot, summer",Vegan,Cold,150,Beverage,Sparkling Soda,
+83,Sunset Dream,"soda water, fruit syrup, ice, strawberry, orange","refresh, romantic, celebratory","Snack, Drink","sunny, hot, summer",Vegan,Cold,150,Beverage,Sparkling Soda,
+84,Strawberry Yakult,"soda water, fruit syrup, ice, yakult","refresh, vitality, comfort","Snack, Drink","sunny, hot, summer",Vegetarian,Cold,150,Beverage,Sparkling Soda,
+85,Peach Soda,"soda water, fruit syrup, ice, peach syrup","refresh, cozy, romantic","Snack, Drink","sunny, hot, summer",Vegan,Cold,135,Beverage,Sparkling Soda,
+86,Green Apple,"soda water, fruit syrup, ice, green apple syrup","refresh, stressed","Snack, Drink","sunny, hot, summer",Vegan,Cold,130,Beverage,Sparkling Soda,
+87,Blueberry,"soda water, fruit syrup, ice, blueberry syrup","refresh, curiosity, routine","Snack, Drink","sunny, hot, summer",Vegan,Cold,130,Beverage,Sparkling Soda,
+88,Peach Tea,"green tea, fruit jam, ice, peach slices","cozy, romantic","Snack, Drink","sunny, hot, summer",Vegan,Cold,140,Beverage,Fruit Tea,
+89,Lemon Fruit Tea,"green tea, fruit jam, ice, lemon slices","sick, stressed","Snack, Drink","sunny, hot, summer",Vegan,Cold,140,Beverage,Fruit Tea,
+90,Strawberry Fruit Tea,"green tea, fruit jam, ice, strawberry bits","romantic, celebratory","Snack, Drink","sunny, hot, summer",Vegan,Cold,150,Beverage,Fruit Tea,
+91,Kiwi Fruit Tea,"green tea, fruit jam, ice, kiwi slices","vitality, curiosity","Snack, Drink","sunny, hot, summer",Vegan,Cold,140,Beverage,Fruit Tea,
+92,Blueberry Fruit Tea,"green tea, fruit jam, ice, blueberry","routine, vitality","Snack, Drink","sunny, hot, summer",Vegan,Cold,140,Beverage,Fruit Tea,
