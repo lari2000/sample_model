@@ -8,20 +8,16 @@ from sentence_transformers import SentenceTransformer, util
 # 0. GLOBAL CONFIGURATION & BRAIN LOADING
 # ==========================================
 print("   🧠 Loading AI Brain (this may take a moment)...")
-# We use a small, fast model optimized for laptops
 semantic_model = SentenceTransformer('all-MiniLM-L6-v2')
 
 tfidf_vectorizer = None
 full_df = None
 
-# These are the "Concepts" your menu understands. 
-# The AI will map user input to the closest concept here.
 TARGET_MOODS = [
     'vitality', 'celebratory', 'cozy', 'comfort', 'stressed', 
     'hangry', 'sick', 'romantic', 'curiosity', 'routine', 'refresh'
 ]
 
-# Pre-calculate the mathematical positions of your moods
 mood_embeddings = semantic_model.encode(TARGET_MOODS, convert_to_tensor=True)
 
 # ==========================================
@@ -33,7 +29,6 @@ def load_data():
         df = pd.read_csv('menu_data.csv')
         df['price'] = pd.to_numeric(df['price'], errors='coerce')
         
-        # Combine columns for AI Text Search (Keyword matching layer)
         df['features'] = (
             df['name'] + " " + 
             df['ingredients'] + " " + 
@@ -49,7 +44,7 @@ def load_data():
         full_df = df
         return df
     except FileNotFoundError:
-        print("❌ Error: 'menu_data.csv' not found.")
+        print("Error: 'menu_data.csv' not found.")
         return None
 
 def build_model(df):
@@ -129,7 +124,6 @@ def extract_budget(text):
 
 def extract_category(text):
     text = text.lower()
-    # Regex is still better for strict categories than semantic search
     categories = {
         'non coffee': 'Non-Coffee', 'non-coffee': 'Non-Coffee',
         'milk tea': 'Milk Tea', 'fruit tea': 'Fruit Tea', 'sparkling soda': 'Sparkling Soda',
@@ -347,14 +341,14 @@ def recommend(parse_data):
     valid_candidates = [c for c in candidates if c['percentage'] > 0]
     
     if valid_candidates:
-        # Find the highest score (e.g., 100) and show only those
+        # Find the highest score and show only those
         best_score = max(c['percentage'] for c in valid_candidates)
         candidates = [c for c in valid_candidates if c['percentage'] == best_score]
     else:
         candidates = [] 
 
     if not candidates and (active_criteria or parse_data['budget'] or parse_data['diet']):
-        print("   ⚠️  No exact matches found. Showing Chef's Recommendations:")
+        print("No exact matches found. Showing Chef's Recommendations:")
         return get_fallback_recommendations()
 
     candidates = sorted(candidates, key=lambda x: (-x['percentage'], -x['text_score'], x['price']))
@@ -378,38 +372,38 @@ if __name__ == "__main__":
             
             if has_context and not has_command:
                 print_analysis(p)
-                print("   ℹ️  I noticed these preferences. Do you want me to recommend something?")
+                print("I noticed these preferences. Do you want me to recommend something?")
                 continue 
 
             if not has_context and has_command:
                 wildcards = ['something', 'anything', 'whatever', 'surprise me']
                 if any(w in u.lower() for w in wildcards):
-                    print("   🎲 You're feeling adventurous! Here are our best sellers:")
+                    print("You're feeling adventurous! Here are our best sellers:")
                     recs = get_fallback_recommendations()
                     for item in recs:
                         print(f"   ★ {item['name']} (₱{item['price']})")
                     continue
                 else:
-                    print("   ❓ I don't know what recommendations you want, can you clarify it?")
+                    print("I don't know what recommendations you want, can you clarify it?")
                     continue 
 
             if not has_context and not has_command:
-                print("   👋 Hi there! Try saying 'I want a cold drink' or 'I had a bad day'.")
+                print("Hi there! Try saying 'I want a cold drink' or 'I had a bad day'.")
                 continue
 
             print_analysis(p)
             recs = recommend(p)
             
             if not recs:
-                print("   ⚠️  No items found.")
+                print("No items found.")
             else:
                 for item in recs:
                     score = item.get('percentage', 0)
                     missed = ", ".join(item.get('missed', [])) if item.get('missed') else "None"
                     
                     if missed == 'Fallback Recommendation':
-                        print(f"   💡 [Chef's Rec] {item['name']} (₱{item['price']})")
+                        print(f"[Chef's Rec] {item['name']} (₱{item['price']})")
                     elif score == 100:
-                        print(f"   ★ {item['name']} (₱{item['price']}) - 100% Match!")
+                        print(f"{item['name']} (₱{item['price']}) - 100% Match!")
                     else:
-                        print(f"   ☆ {item['name']} (₱{item['price']}) - {score}% (Missed: {missed})")
+                        print(f"{item['name']} (₱{item['price']}) - {score}% (Missed: {missed})")
